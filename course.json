@@ -1,0 +1,9 @@
+{"roaster":[
+    {"course_no":1331,"dept":"Sciences" ,"campus":"Bengaluru" ,"session":2021, "noofseats":32, "HOD":"Dr. Gyan Gatia"},
+    {"course_no":2245,"dept":"Sciences" ,"campus":"New York" ,"session":2018, "noofseats":35, "HOD":"Dr. Gyan Gatia"},
+    {"course_no":3245,"dept":"Humanities" ,"campus":"Melbourne" ,"session":2022, "noofseats":85, "HOD":"Dr. Akshay Singhal"},
+    {"course_no":9985,"dept":"Psychology" ,"campus":"Berlin" ,"session":2022, "noofseats":53, "HOD":"Dr. Pankaj Sharma"},
+    {"course_no":2278,"dept":"Law" ,"campus":"London" ,"session":2019, "noofseats":46, "HOD":"Dr. Rohit Priyadarshi"},
+    {"course_no":5278,"dept":"Social Sciences" ,"campus":"Toronto" ,"session":2021, "noofseats":25, "HOD":"Dr. Reuben Mohan Keurian"}
+   
+]}  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"> </script>
+
+  <link rel="stylesheet" href="signin.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Dashboard</title>
+  <script src="angular.min.js"></script>
+  <script src="roaster.js"></script>
+</head>
+
+<body>
+  <br>
+  <label for="rowsToBeDisplayed">Display:</label>
+  <input type="number" step="1" min="0" max="10" ng-model="rowlimit" placeholder="Number of rows to be displayed...">
+
+  <div class="dark" ng-controller="roaster_ctrl">
+
+    <h3><i class="fa fa-users"></i> Roaster List</h3>
+    <table class="styled-table">
+      <thead>
+
+        </tr>
+        <tr>
+          <th><input type="search" placeholder="Search Course No" ng-model="search.course_no" /></th>
+          <th><input type="search" placeholder="Search dept" ng-model="search.dept" /></th>
+          <th><input type="search" placeholder="Search campus" ng-model="search.campus" /></th>
+          <th><input type="search" placeholder="Search session" ng-model="search.session" /></th>
+          <th><input type="search" placeholder="Search No of seats" ng-model="search.noofseats" /></th>
+          <th><input type="search" placeholder="Search HOD" ng-model="search.HOD" /></th>
+        </tr>
+        <tr>
+          <th>Course No</th>
+          <th>Dept</th>
+          <th>Campus</th>
+          <th>Session</th>
+          <th>No of seats</th>
+          <th>HOD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="course in r_list | filter:search |limitTo:rowlimit">
+          <td scope="row">{{course.course_no}}</td>
+          <td>{{course.dept | uppercase }}</td>
+          <td>{{course.campus | lowercase | name}}</td>
+          <td>{{course.session | unit}}</td>
+          <td>{{course.noofseats | unit}}</td>
+          <td>{{course.HOD | name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
